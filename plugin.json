@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "ryu.security",
+  "version": "0.1.0",
+  "description": "A local-first security workbench for reviewing authorized repositories, validating static findings, and keeping scan evidence and safe remediation proposals together.",
+  "author": {
+    "name": "Ryu",
+    "url": "https://ryuhq.com"
+  },
+  "homepage": "https://github.com/amajorai/ryu/tree/main/apps-store/security",
+  "repository": "https://github.com/amajorai/ryu/tree/main/apps-store/security",
+  "keywords": [
+    "security",
+    "vulnerability",
+    "code review",
+    "threat model",
+    "findings"
+  ],
+  "extensions": {
+    "com.ryuhq.ryu": {
+      "id": "@ryu/security",
+      "displayName": "Security"
+    }
+  }
+}
