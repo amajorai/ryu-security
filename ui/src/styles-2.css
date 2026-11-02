@@ -1,0 +1,179 @@
+/* Continues styles.css; main.tsx imports the parts in order. */
+@layer security {
+	.security-scan-type-tabs [data-slot="tabs-trigger"] {
+		justify-content: flex-start;
+		min-height: 3.4rem;
+		text-align: start;
+	}
+
+	.security-scan-type-tabs [data-slot="tabs-trigger"] > span:last-child {
+		display: flex;
+		flex-direction: column;
+		gap: 0.15rem;
+	}
+
+	.security-scan-type-tabs [data-slot="tabs-trigger"] small {
+		font-size: 0.66rem;
+		font-weight: 400;
+		color: var(--muted-foreground);
+	}
+
+	.security-form-card {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		padding: 1rem;
+		background: color-mix(in oklch, var(--card) 92%, var(--background));
+		border: 1px solid var(--border);
+		border-radius: var(--radius);
+	}
+
+	.security-form-row {
+		display: grid;
+		grid-template-columns: minmax(0, 1.35fr) minmax(12rem, 0.8fr);
+		gap: 0.9rem;
+	}
+
+	.security-form-field {
+		display: flex;
+		flex-direction: column;
+		gap: 0.4rem;
+		min-width: 0;
+	}
+
+	.security-form-field-wide {
+		grid-column: 1 / -1;
+	}
+
+	.security-form-field label {
+		font-size: 0.73rem;
+		font-weight: 500;
+	}
+
+	.security-form-field > [data-slot="native-select-wrapper"] {
+		width: 100%;
+	}
+
+	.security-form-field > [data-slot="native-select-wrapper"] select {
+		width: 100%;
+	}
+
+	.security-toggle-row {
+		display: flex;
+		gap: 1rem;
+		align-items: center;
+		justify-content: space-between;
+		padding-top: 0.9rem;
+		border-top: 1px solid var(--border);
+	}
+
+	.security-toggle-row > div {
+		display: flex;
+		flex-direction: column;
+		gap: 0.18rem;
+	}
+
+	.security-toggle-row strong {
+		font-size: 0.76rem;
+		font-weight: 500;
+	}
+
+	.security-toggle-row span {
+		font-size: 0.69rem;
+		color: var(--muted-foreground);
+	}
+
+	.security-context-fields {
+		display: flex;
+		flex-direction: column;
+		gap: 0.85rem;
+		padding-top: 0.15rem;
+	}
+
+	.security-context-fields textarea {
+		min-height: 4.8rem;
+	}
+
+	.security-severity-filter {
+		flex: 0 0 auto;
+		width: 10rem;
+	}
+
+	.security-severity-filter select {
+		width: 100%;
+		font-size: 0.68rem;
+	}
+
+	@media (max-width: 820px) {
+		.security-posture {
+			font-size: 0.68rem;
+		}
+
+		.security-workbench {
+			grid-template-rows: minmax(13rem, 38%) minmax(0, 1fr);
+			grid-template-columns: minmax(0, 1fr);
+		}
+
+		.security-list-pane {
+			border-inline-end: 0;
+			border-bottom: 1px solid var(--border);
+		}
+
+		.security-detail-scroll {
+			padding: 1.15rem 1rem 2.5rem;
+		}
+	}
+
+	@media (max-width: 560px) {
+		.security-navigation {
+			padding-inline: 0.75rem;
+		}
+
+		.security-posture-divider,
+		.security-posture span:last-child {
+			display: none;
+		}
+
+		.security-meta-grid,
+		.security-finding-meta,
+		.security-evidence-columns,
+		.security-form-row {
+			grid-template-columns: minmax(0, 1fr);
+		}
+
+		.security-detail-header {
+			flex-direction: column;
+		}
+
+		.security-detail-actions {
+			justify-content: flex-start;
+		}
+
+		.security-record-row {
+			padding-inline: 0.75rem;
+		}
+
+		.security-record-meta {
+			min-width: 4.2rem;
+		}
+
+		.security-record-meta .security-status-badge {
+			max-width: 4.2rem;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+
+		.security-scan-type-tabs [data-slot="tabs-trigger"] {
+			padding-inline: 0.6rem;
+		}
+
+		.security-scan-type-tabs [data-slot="tabs-trigger"] small {
+			display: none;
+		}
+
+		.security-patch-empty {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+	}
+}
